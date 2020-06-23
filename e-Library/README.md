@@ -1,6 +1,6 @@
 #                e-Library
 # Μια ηλεκτρονική βιβλιοθήκη γραμμένη με Python 3, Flask
-# και τεχνολογίες διαδικτύου HTML5, CSS3, Bootstrap 3, JavaScript, JQuery
+# και τεχνολογίες διαδικτύου HTML5, CSS3, Bootstrap 3, JavaScript
 # Δημιουργία: Νίκος-Νικήτας | Created by: Nikos-Nikitas
  
 Μια προσπάθεια για Full Stack Development.
