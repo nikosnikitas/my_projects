@@ -1,0 +1,91 @@
+﻿<!-- 
+   FVM-HTML5
+   
+   Εφαρμογή ιστού που υπολογίζει 
+   τη μελλοντική αξία των χρημάτων μας,
+   όταν τα βγάλουμε από την τράπεζα 
+
+- - - > HTML, CSS, Bootstrap, JS < - - -
+
+   Δημιουργία: Νίκος-Νικήτας 
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+  FVM-HTML5: Υπολογισμός Μελλοντικής Αξίας Χρημάτων
+</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Ίσως χρειαστεί και το JQuery -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> 
+<!-- Το Bootstrap 4 ένα πλαίσιο (Framework) του CSS για στυλ -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Responsive design για να αποκρίνεται στην οθόνη που προβάλλεται -->
+
+<style>
+
+h1, h3 {
+   text-align: center;
+}
+
+p {
+text-align: center;
+}
+
+ button {
+   text-align: center;
+}
+input {
+   text-align: center;
+}
+
+</style>
+
+</head>
+   <body class="bg-dark text-white">
+   <div>
+   <h1> FVM-HTML5 </h1>
+   <br/>
+   <p id="ui">
+<h3 class="text-*-center">Χρήματα: </h3><input type="number" id="parousa_aksia" class="form-control" autofocus="on">
+<br/>
+<h3 class="text-*-center">Τόκος %: </h3><input type="number" id="epitokio" class="form-control">
+<br/>
+<h3 class="text-*-center">Έτη: </h3><input type="number" id="xronia" class="form-control">
+<br/>
+<button onclick="myF()" class="btn btn-primary form-control"> Υπολογισμός </button>
+   <!-- με το κλικ εκτελείται η συνάρτηση myF -->
+   </p>
+   
+   <p id="par"> 
+   
+   </p>
+   </div>
+   <script>
+//Υπολογίζει με τον τύπο την μελλοντική αξία των χρημάτων μας.
+   
+   function Frn (PV,r,n) {
+   var A = 1+r/100;
+   var FV = PV*(Math.pow(A,n))
+   return FV;
+   }
+ 
+ /* Παίρνει τις τιμές από τα πεδία και τα στέλνει για υπολογισμό 
+ στη συνάρτηση Frn. Μετά βάζει το αποτέλεσμα στην παράγραφο. 
+ */
+   function myF() {
+   var PV, r, n, D, D2;
+   PV = document.getElementById("parousa_aksia").value;
+   r = document.getElementById("epitokio").value;
+   n = document.getElementById("xronia").value;
+   D = Frn(PV,r,n);      
+   D2 = D.toFixed(2);
+      document.getElementById("par").innerHTML="<h5>Η μελλοντική αξία των χρημάτων σας είναι: </h5><h3 class='text-*-center'>" + D2 + "&nbsp;" + "&euro; </h3>" ;
+	  }
+   </script>
+   </body>   
+   </html>

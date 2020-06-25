@@ -1,0 +1,79 @@
+<!--
+	FPA-HTML5: Εφαρμογή ιστού προσθαφαίρεσης του ΦΠΑ. 
+
+	Δημιουργία: Νίκος-Νικήτας
+	
+	- - - > HTML, CSS, JS < - - - 
+
+-->
+<!DOCTYPE html>
+<head>
+	<title> FPA-HTML5: ΠΡΟΣΘΑΦΑΙΡΕΣΗ Φ.Π.Α ΣΕ HTML5 </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Responsive design για να αποκρίνεται στην οθόνη που προβάλλεται -->	
+	<style>
+	body{background-color:grey;}	
+    h1{
+	color:cyan;}
+	label{color:white;}
+	button:hover{background-color:aqua;}
+    p#p2{
+    background-color:white;}	
+	</style>
+	<meta charset="utf-8">
+	</head>
+	<body>
+	<p id="p1" align="center">
+	<h1>
+	 FPA - HTML5
+	</h1>
+	<label align="center"><b> Χρηματικό Ποσό</b> </label>
+	<br/>
+	<input type="text" align="center" id="poso" required="number"></input>
+	<br/>
+	<label align="center"> <b>Φ.Π.Α %</b> </label>
+	<br/>
+	<input type="text" align="center" id="fpa" required="number"></input>
+	<br/>
+	<button align="center" onclick="AddFPA()"> Προσθήκη Φ.Π.Α
+	</button>
+	<button align="center" onclick="SubFPA()">
+	Αφαίρεση Φ.Π.Α
+	</button>
+	<br/>
+	<label><b>Αποτέλεσμα</b></label>
+	<p id="p2"></p>
+	<br/>
+	</p>
+	<script>
+	//Παίρνει τις τιμές από τα πεδία μέσω του ID τους και προσθέτει το ΦΠΑ.
+	//με τον ανάλογο τύπο.
+function CalcAdd(f,pf){
+        var pf = document.getElementById("poso").value;
+        var f = document.getElementById("fpa").value;
+        return (1+f/100)*pf;
+} 
+
+//Αφαιρεί το ΦΠΑ.
+function CalcSub(f,pf){ 
+      var pf = document.getElementById("poso").value;
+      var f = document.getElementById("fpa").value;
+      return pf/(1+f/100);
+
+} 
+
+//Προσθέτουν το ανάλογο αποτέλεσμα στην παράγραφο.
+	function AddFPA(){
+        var mf=CalcAdd();
+document.getElementById("p2").innerHTML="Η τιμή μετά την προσθήκη του Φ.Π.Α. είναι: "+mf;
+    }
+	
+
+	function SubFPA(){
+var mf=CalcSub();
+document.getElementById("p2").innerHTML="Η τιμή μετά την αφαίρεση του Φ.Π.Α. είναι: "+mf;
+
+}
+	</script>
+	</body>
+<html>
