@@ -14,7 +14,7 @@
 
 1. Γραμμένη με Python 3 και Tkinter ως εφαρμογή για υπολογιστή.
 
-2. Γραμμένη με HTML, CSS, (και Bootstrap στη μια από τις δύο) και JavaScript ως εφαρμογή ιστού.
+2. Γραμμένη με HTML, CSS, (και Bootstrap 4 στην εφαρμογή FVM) και JavaScript ως εφαρμογή ιστού.
 
 -------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -34,4 +34,4 @@ These are distributed in two versions.
 
 1. Written in Python 3 and Tkinter as a desktop application.
 
-2. Written in HTML, CSS, (Bootstrap for one of the two) and JavaScript as a web application.
+2. Written in HTML, CSS, (Bootstrap 4 for the FVM app) and JavaScript as a web application.
