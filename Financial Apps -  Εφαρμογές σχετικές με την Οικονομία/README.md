@@ -22,7 +22,7 @@ English
 
 # FPA
 
-Adds the tax. We give to the fields the values of the amount of our money and the tax %. We press the button and it adds/subtracts the tax
+Adds/subtracts the tax. We insert to the fields the values of the amount of our money and the tax %. We press the button and it adds/subtracts the tax
 and returns us the result.
 
 # FVM
