@@ -1,0 +1,84 @@
+﻿<!--
+**************************************************************
+---	webOffice Companion - A web suite of office help apps. ---
+---						Author: Nikos-Nikitas			   ---
+---						GitHub: nikosnikitas			   ---
+---								using 					   ---
+---					HTML, CSS, JS, JQuery, JQueryUI, VueJS ---	   						   ---
+**************************************************************
+-->
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8"/>
+	<!-- making our app responsive and add the JQuery, JQueryUI and VueJS scripts -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link id="stl" href = "https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+    <script src = "https://code.jquery.com/jquery-1.12.1.min.js"></script>
+    <script src = "https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<title> webOffice Companion by nikosnikitas </title>
+	<script src="jqscript.js">
+	</script>
+	</head>
+	<body style="text-align:center;">
+		<header>
+		<h1> webOffice Companion </h1>
+		</header>
+		<div id="menu" data-role="page" data-theme="a" style="font-size: 16px;">
+		<ul>
+			<li><a href="#t1"> Notepad </a></li>
+			<li><a href="#t2"> Calendar </a></li>
+			<li><a href="#t3"> Music Player </a></li>
+		</ul>
+			<!-- A note taking div for quick notes you want to take. -->
+			<div id="t1">
+				<p>
+				You can insert your notes quickly here.
+				<br/>
+				<br/>
+				<h3> Notes </h3>
+				<br/>
+				<div id="App">
+				<textarea rows=5 cols=30 placeholder="Your note here." v-model="notes"></textarea>
+				<br/>
+				<br/>
+				<p style="white-space:pre-line;">{{ notes }}</p>
+				</div>
+				</p>
+			</div>
+			<!-- The calendar where user can pick and view any date -->
+			<div id="t2">
+				<p>
+				A calendar for quick access. Choose/Write a date to view.
+				<br/>
+				<br/>
+				<br/>
+				<!-- I put a quick style here -->
+				<input type="text" id="dp" placeholder="Click here for date."/>
+				</p>
+			</div>
+			<div id="t3">
+				<p>
+				You can listen to music here.
+				<br/>
+				<br/>
+				<br/>
+				<!-- 24/7 music video from YouTube -->
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/eQdA8dvsgQs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</p>
+			</div>
+		</div>
+		<br/>
+		<label> Mode: &nbsp; </label>
+		<button id="lmode"> Light </button>
+		<button id="dmode"> Dark </button>
+		<br/>
+		<br/>
+		<footer> Created by Nikos-Nikitas <br/> GitHub: nikosnikitas </footer>
+	<script src="vue_script.js">
+	</script>
+	</body>
+</html>
