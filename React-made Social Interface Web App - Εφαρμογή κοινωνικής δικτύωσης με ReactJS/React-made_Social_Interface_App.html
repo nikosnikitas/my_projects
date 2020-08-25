@@ -1,0 +1,300 @@
+<!-- 
+--- RSI: React-made Social Interface: A Social Media kind of single page app.
+--- Author: Nikos-Nikitas
+--- GitHub: nikosnikitas
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Link to W3.CSS for Responsive Design -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- React necessary scripts + Babel for JSX -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <title> RSI: React-made Social Interface </title>
+    <!-- Adding external CSS -->
+    <link rel="stylesheet" href="style.css"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <h1 id="logo"> RSI React Social Interface </h1>
+    </header>
+    <h2> Login to post! </h2>
+    <br/>
+    <div id="mydiv"></div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <script crossorigin type="text/babel">
+
+    /*
+    A social media interface project using ReactJS.
+    this is a class render is a must.
+    constructor and super allow us to use props.
+    Adding Random posts from random (not real) users.
+    Adding a Posts List for a User to make posts.
+    Adding User class with username and login handling. 
+    Adding a Clock getting the time and ticking.
+    */
+
+    //the List displaying posts the user makes
+
+    class PostsList extends React.Component {
+
+        createPosts(post) {
+            return <li id="posts-list" key={post.key}>{post.content}</li>
+        }
+
+        render() { 
+            
+            //posts are listed by key and value and returned one by one.
+
+            var postEntries = this.props.entries;
+            var listPosts = postEntries.map(this.createPosts);
+            
+            return (
+                <ul className="posts-list">
+                    {listPosts}
+                </ul>
+                );
+        }
+
+    }
+
+    //Random posts that will appear on the feed.
+    class RandomPosts extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {
+                randomtxt : [
+                'Alice posted: What a wonderful day!',
+                'Bob posted: So excited to see the match!',
+                'Charlie posted: Commodo varius. Curabitur condimentum etiam viverra felis felis.',
+                'David posted: Hendrerit suscipit lacinia. Dui. Primis vestibulum rhoncus taciti porta interdum lacinia vivamus vitae justo sollicitudin.',
+                'Eric posted: Viverra ante dui. Fusce nonummy mattis senectus inceptos interdum. Torquent aptent non praesent morbi ipsum tristique. Tristique. Magnis integer.'
+                ],
+                r:''
+            };
+            
+            this.nextR = this.nextR.bind(this);
+        }
+            //random posts are generated every 3 seconds by rID.
+
+        componentDidMount() {
+        this.rID = setInterval(
+            () => this.nextR(),
+            3000
+        );   
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.rID);
+    }
+    nextR() {
+        this.setState(
+            {
+                r: this.state.randomtxt[Math.ceil(Math.random() * 4)]
+            }
+        );
+    }
+        
+        render() {
+
+            return(
+                <div id="randomdiv">
+                    <h3> What others post.</h3>
+                    <br/>
+                    <ul id="randomlist">
+                        <li id="randompost" >
+                        {this.state.r}
+                        </li>
+                        <br/>
+                    </ul>
+                </div>
+            );
+
+        }
+
+    }
+
+
+    //the User Login Form
+    class UserForm extends React.Component {
+        constructor(props){
+                super(props);
+                this.state = {
+                    username: '',
+                    post: '',
+                    posted: []
+                    };
+                
+                //bound functions
+                this.handleLoginChange = this.handleLoginChange.bind(this)
+                this.handleClick = this.handleClick.bind(this)
+                this.makePost = this.makePost.bind(this)
+            }
+            //arrow function since it is one line
+        handleLoginChange = (e) => this.setState({ username: e.target.value });
+            //handling the click event
+        handleClick(e) {
+            e.preventDefault();
+            document.getElementById("myp").style.display="inline-block";
+            document.getElementById("loginform").style.display="none";
+        
+        }
+
+        //adds the post to newPost, makes it to appear (with content and date posted), resets the input.
+        makePost(e) { 
+            if (this.mypost.value !== " ") {
+            
+            var newPost = {
+                content: this.mypost.value,
+                key: Date.now()
+            };
+            
+            //making change to the state's posted variable (oldState is used for security)
+            this.setState((oldState) => { 
+                return {
+                posted: oldState.posted.concat(newPost)
+                };
+                });
+                
+            this.mypost.value="";
+            }
+
+            e.preventDefault(); //prevents default submission
+        }   
+
+    
+
+        //rendering the component getting the state values to the corresponding elements.
+        render() {
+            return(
+                    <div>
+                        <h2> Logged in as: {this.state.username} </h2>
+                        <br/>
+                        <form method="POST" onSubmit={this.handleClick} id="loginform">
+                        <input type="text" placeholder="Your User Name here."
+                         value={this.state.username}
+                         onChange={this.handleLoginChange} 
+                         className="myinput"
+                         />
+                        <input type="submit" value="Login" className="mybtn" />
+                        </form>
+                        <br/>
+                        <p id="myp" style={{display:"none"}}>
+                            <h3> Hello {this.state.username}! </h3>
+                            <h4> What would you like to post? </h4>
+                            <form onSubmit={this.makePost}>
+                            <textarea placeholder="Write your thoughts"  
+                            ref={(a) => this.mypost = a}>
+                            </textarea>
+                            <br/>
+                            <input type="submit" value="Post" className="mybtn" />
+                            </form>
+                            <br/>
+                            <h3> Your Posts </h3>
+                            <br/>
+                            <PostsList entries={this.state.posted}/>
+                        </p>
+                    </div>
+            );
+        }
+
+    }
+
+    //the Clock
+class Clock extends React.Component {
+    
+    constructor(props) {
+        super(props);
+        this.state = {
+                date: new Date()
+            };
+    }
+
+    //if the component mounts it starts the clock ticking, if it unmounts the ticking stops.
+    componentDidMount() {
+        this.tID = setInterval(
+            () => this.moveTime(),
+            1000
+        );   
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.tID);
+    }
+    moveTime() {
+        this.setState(
+            {
+                date: new Date()
+            }
+        );
+    }
+    
+    //styling using className for css class.
+
+        render() {
+            return (
+            <div className="the_clock" style={{'background-color':'black'}}> 
+                <h2 className="the_clock"> <b> {this.state.date.toLocaleTimeString()} </b></h2>    
+            </div>
+            );
+        }
+    }
+
+    class App extends React.Component {
+        render() {
+            return(
+                <div>
+                <Clock />
+                <RandomPosts />
+                <UserForm />
+                </div>
+            );
+        }
+
+    }
+
+
+    //always ReactDOM.render(); the component in the end.
+
+    ReactDOM.render(
+        <App />,
+        document.getElementById("mydiv")
+    );
+    </script>
+    <br/>
+    <br/>
+    <footer>
+        Created by: Nikos-Nikitas (2020)
+        <br/> 
+        GitHub: nikosnikitas
+    </footer>
+</body>
+</html>

@@ -1,0 +1,87 @@
+/*
+Here are the styles for the RSI (React-made social interface) app.
+Created by Nikos-Nikitas
+*/
+
+
+body {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(rgb(22, 21, 21),rgb(170, 163, 163));
+    color:white;
+    background-repeat: no-repeat;
+}
+
+footer {
+    text-align: center;
+    background-color:black;
+}
+
+@keyframes rotate {
+    from {transform:rotate3d(0,0,0,60deg);}
+    to {transform:rotate3d(1,0,0,60deg);}
+}
+#logo {
+    animation-name: rotate;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+
+.the_clock {
+    background-image: radial-gradient(rgb(56, 55, 55),black);
+    color:cyan;
+    border-radius: 50%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: xx-large;
+    font-weight: bolder;
+    height: 25%;
+    width: 200px;
+    margin: 0 auto;
+    float:right;
+}
+
+.myinput{
+    border-style: solid;
+    border-radius: 25px;
+    display:grid;
+    place-items: center;
+    width:400px;
+    font-size: 22px;
+}
+
+.mybtn {
+    border-style: solid;
+    border-radius: 25px;
+    width:200px;
+    font-size: 22px;
+    cursor:pointer;
+}
+
+li {
+    list-style-type: none;
+}
+
+#randomdiv {
+    background-color: white;
+    color:black;
+    border-style: solid;
+    border-radius: 25px;
+    width:400px;
+    display:grid;
+    place-items: center;
+    justify-content: center;
+}
+#loginform {
+    display:grid;
+    place-items: center;
+}
+#mydiv {
+    display:grid;
+    place-items: center;
+}
+
+#myp {
+    font-size:22px;
+}
