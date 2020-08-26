@@ -128,10 +128,10 @@ public class JVet {
 			
 		switch(c){
 			case 1:
-				View(); //to be added
+			//	View(); //to be added
 				break;
 			case 2:
-				Add(); //to be added
+			//	Add(); //to be added
 				break;
 			case 3:
 				System.exit(0)
