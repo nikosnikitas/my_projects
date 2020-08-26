@@ -125,7 +125,7 @@ public class JVet {
 			
 			}
 		}
-			
+			//here we take each case of the user's input.	
 		switch(c){
 			case 1:
 			//	View(); //to be added
@@ -134,7 +134,7 @@ public class JVet {
 			//	Add(); //to be added
 				break;
 			case 3:
-				System.exit(0)
+				System.exit(0) //to exit the program.
 				break;
 		}
 
