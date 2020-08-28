@@ -1,4 +1,4 @@
-/*		JVet a veterinary management system in Java. (INCOMPLETE yet)
+/*		JVet a veterinary management system in Java.
  *		
  *			Author: Nikos-Nikitas
  *
@@ -11,12 +11,13 @@
  * */
 
 //importing necessary classes from packages
-//for file, exception, writing to file, scanner for input
+//for file, exception, writing to file, scanner for input,ArrayList for our lists
 
 import java.io.File;
 import java.io.IOException;
 import java.io.FileWriter;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class JVet {
 	
@@ -32,7 +33,49 @@ public class JVet {
 
 		char gender = 'M';
 	}
+	
+	public static void Add() {
 
+		/*
+		Values are made for ArrayLists to add the data the user inputs.
+		user adds and the data is stored in variables which then goes in the arrays.
+		then it will be all added in the file.
+		*/
+
+		ArrayList<String> NameList = new ArrayList<String>();
+		ArrayList<Integer> AgeList = new ArrayList<Integer>();
+		ArrayList<String> SpeciesList = new ArrayList<String>();
+		ArrayList<Character> GenderList = new ArrayList<Character>();
+		
+		//add name to its list
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter your pet's name: ");
+		String petName = s.nextLine();
+		NameList.add(petName);
+
+		//add age to list
+		System.out.println("Enter your pet's age: ");
+		int petAge = s.nextInt();
+		AgeList.add(petAge);
+		
+		s.nextLine(); //input so that species won't be skipped.
+		
+		//add species to list
+		System.out.println("Enter your pet's species: ");
+		String petSpecies = s.nextLine();
+		SpeciesList.add(petSpecies);
+		
+		//add gender
+		System.out.println("Enter your pet's gender: ");
+		char petGender = s.next().charAt(0);
+		GenderList.add(petGender);
+		
+		//printing the names list
+		
+		for (int i=0; i < NameList.size(); i++ ){
+			System.out.println(NameList.get(i));
+		}
+	}
 
 	public static void main(String[] args) {
 		Pet rufus = new Pet();
@@ -116,27 +159,24 @@ public class JVet {
 				
 				//user's choice is asked and read
 				
-				int c = s.nextLine();
+				int c = s.nextInt();
 
 			//if the user makes a valid choice the loop breaks
-			if(c=1 || c=2 || c=3) {
-				
-				here=false;
+
+				switch(c){
+			case 1:
+				//View(); //to be added
+				break;
+			case 2:
+				Add(); //to be added
+				break;
+			case 3:
+				System.exit(0);
+				break;
+				}
 			
 			}
 		}
-			//here we take each case of the user's input.	
-		switch(c){
-			case 1:
-			//	View(); //to be added
-				break;
-			case 2:
-			//	Add(); //to be added
-				break;
-			case 3:
-				System.exit(0) //to exit the program.
-				break;
-		}
+			
 
 	}
-}
