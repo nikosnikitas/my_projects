@@ -10,14 +10,16 @@
  *	For more find me on GitHub: nikosnikitas
  * */
 
-//importing necessary classes from packages
-//for file, exception, writing to file, scanner for input,ArrayList for our lists
-
+/*importing necessary classes from packages
+for file, IO/FileNotFound exceptions, writing to file, scanner for input 
+and Arrays to work with arrays
+*/
 import java.io.File;
 import java.io.IOException;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.util.Scanner;
-import java.util.ArrayList;
+import java.util.Arrays;
 
 public class JVet {
 	
@@ -37,44 +39,97 @@ public class JVet {
 	public static void Add() {
 
 		/*
-		Values are made for ArrayLists to add the data the user inputs.
-		user adds and the data is stored in variables which then goes in the arrays.
-		then it will be all added in the file.
+		Values are added by the user here.
+		Input is taken and stored making a new Pet object.
 		*/
-
-		ArrayList<String> NameList = new ArrayList<String>();
-		ArrayList<Integer> AgeList = new ArrayList<Integer>();
-		ArrayList<String> SpeciesList = new ArrayList<String>();
-		ArrayList<Character> GenderList = new ArrayList<Character>();
+//ToDo: Replace String[] and ArrayList<String> with plain variables
+		Pet userMade = new Pet();
 		
-		//add name to its list
+		//add name to variable
 		Scanner s = new Scanner(System.in);
 		System.out.println("Enter your pet's name: ");
-		String petName = s.nextLine();
-		NameList.add(petName);
-
-		//add age to list
+		userMade.name = s.nextLine();
+		
 		System.out.println("Enter your pet's age: ");
-		int petAge = s.nextInt();
-		AgeList.add(petAge);
+		userMade.age = s.nextInt();
 		
 		s.nextLine(); //input so that species won't be skipped.
 		
-		//add species to list
 		System.out.println("Enter your pet's species: ");
-		String petSpecies = s.nextLine();
-		SpeciesList.add(petSpecies);
-		
-		//add gender
+		userMade.species = s.nextLine();
+
 		System.out.println("Enter your pet's gender: ");
-		char petGender = s.next().charAt(0);
-		GenderList.add(petGender);
+		userMade.gender = s.next().charAt(0);
 		
-		//printing the names list
+		//writing data to file
+		//formatting to string
 		
-		for (int i=0; i < NameList.size(); i++ ){
-			System.out.println(NameList.get(i));
+																
+		try { FileWriter fw = new FileWriter("data.txt"); // true appends to the file instead of overwriting it.
+	
+				fw.write("User added\n__________\nName: "+ String.format("%s \n",userMade.name));
+				System.lineSeparator();
+				
+				fw.write("Age: "+ String.format("%s \n",userMade.age));
+				System.lineSeparator();
+				
+				fw.write("Species: "+ String.format("%s \n",userMade.species));
+				System.lineSeparator();
+				
+				fw.write("Gender: "+ String.format("%s \n",userMade.gender));
+				System.lineSeparator();
+				
+			fw.close();
+			System.out.println("User wrote data successfully!");
+
+		}catch (IOException e) {
+			System.out.println("Error writing to file.");
 		}
+
+		//Viewing data
+		View();
+		System.exit(0); //exiting the program
+	}
+	
+
+	//Creates the data file unless an error occurs	
+	public static void makeFile() {
+
+			try {
+			File f = new File("data.txt");
+			if (f.createNewFile()) {
+				System.out.println("Created file " + f + " successfully!");
+			}
+			else {
+				System.out.println("File " + f + " already exists.");
+				}
+			}
+		catch (IOException e) {
+
+			System.out.println("Error creating file.");
+		}
+	}
+
+	
+	public static void View() {
+		
+		//tries to open the file if it exists and reads the data. Throws error if the file is not found.
+
+		try {
+			File f = new File("data.txt");
+			Scanner r = new Scanner(f);
+			while (r.hasNextLine()) {
+				String dataRead = r.nextLine();
+				System.out.println(dataRead);
+			}
+			r.close();
+			System.exit(0);
+
+		} catch (FileNotFoundException e) {
+			System.out.println("Error finding file.");
+			System.exit(0);
+		}
+
 	}
 
 	public static void main(String[] args) {
@@ -96,41 +151,27 @@ public class JVet {
 		rico.species="Parrot";
 		rico.gender='M';
 		
-//try to create file unless an error happens
-//then we try to write the data of our pets to the file
 
-	try {
-		File f = new File("data.txt");
-		if (f.createNewFile()) {
-			System.out.println("Created file " + f + " successfully!");
-		}
-		else {
-			System.out.println("File " + f + " already exists.");
-		}
-	}
-	catch (IOException e) {
-
-		System.out.println("Error creating file.");
-	}
-
+	//we try to write the data of our pets to the file
+		
+		makeFile(); //call to create the file
 	
-	try { FileWriter fw = new FileWriter("data.txt");
+		try { FileWriter fw = new FileWriter("data.txt");
 		
-		fw.write("Pet names: "+ String.format("%s %s %s \n",rufus.name,katia.name,rico.name));
-		System.lineSeparator(); //adds new line
-		
-		fw.write("Pet species: "+ String.format("%s %s %s \n",rufus.species,katia.species,rico.species));
-		System.lineSeparator();
-		
-		fw.write("Pet age: "+ String.format("%s %s %s \n",rufus.age,katia.age,rico.age));
-		
-		fw.close();
-		System.out.println("Wrote data successfully!");
+			fw.write("Pet names: "+ String.format("%s %s %s \n",rufus.name,katia.name,rico.name));
+			System.lineSeparator(); //adds new line
+			
+			fw.write("Pet species: "+ String.format("%s %s %s \n",rufus.species,katia.species,rico.species));
+			System.lineSeparator();
+			
+			fw.write("Pet age: "+ String.format("%s %s %s \n",rufus.age,katia.age,rico.age));
+			
+			fw.close();
+			System.out.println("Wrote data successfully!");
 
-	}catch (IOException e) {
-		System.out.println("Error writing to file.");
-	}
-
+		}catch (IOException e) {
+			System.out.println("Error writing to file.");
+		}
 
 
 		//Making the main menu
@@ -146,7 +187,7 @@ public class JVet {
 			 * Looping through each option in the array with 'i' 
 			 * and printing it to the screen. 
 */
-			String[] ops = {"Main Menu","[1] View all Pets","[2] Add Pet","[3] Exit"};
+			String[] ops = {"Main Menu","[1] View all Pets data","[2] Add Pets data","[3] Exit"};
 			for(int i=0; i < ops.length; i++) {
 
 				System.out.println(ops[i]);
@@ -157,26 +198,24 @@ public class JVet {
 			System.out.println("Your choice: ");
 		while(here) {
 				
-				//user's choice is asked and read
+			//user's choice is asked and read
 				
-				int c = s.nextInt();
+			int c = s.nextInt();
 
 			//if the user makes a valid choice the loop breaks
 
-				switch(c){
-			case 1:
-				//View(); //to be added
-				break;
-			case 2:
-				Add(); //to be added
-				break;
-			case 3:
-				System.exit(0);
-				break;
-				}
-			
+			switch(c){
+				case 1:
+					View(); //calls to view data
+					break;
+				case 2:
+					Add(); //calls to add data
+					break;
+				case 3:
+					System.exit(0); //exits the program
+					break;
+					}
+				
 			}
 		}
-			
-
-	}
+	}		
