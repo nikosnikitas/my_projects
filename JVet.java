@@ -88,7 +88,7 @@ public class JVet {
 
 		//Viewing data
 		View();
-		System.exit(0); //exiting the program
+		menu(); //returns to main menu
 	}
 	
 
@@ -123,7 +123,7 @@ public class JVet {
 				System.out.println(dataRead);
 			}
 			r.close();
-			System.exit(0);
+			menu();
 
 		} catch (FileNotFoundException e) {
 			System.out.println("Error finding file.");
@@ -131,9 +131,56 @@ public class JVet {
 		}
 
 	}
+	
+	//makes the main menu
+	public static void menu() {
+		
+		//Making the main menu
+		
+		//'here' tracks if the user is in menu and loops.
+
+		boolean here=true;
+		
+			/*giving the user options 'ops' to choose from.
+			 * Looping through each option in the array with 'i' 
+			 * and printing it to the screen. 
+*/
+			String[] ops = {"Main Menu","[1] View all Pets data","[2] Add Pets data","[3] Exit"};
+			for(int i=0; i < ops.length; i++) {
+
+				System.out.println(ops[i]);
+			}
+		
+			Scanner s = new Scanner(System.in); //scans for user input
+			
+			System.out.println("Your choice: ");
+		while(here) {
+				
+			//user's choice is asked and read
+				
+			int c = s.nextInt();
+
+			//if the user makes a valid choice the loop breaks
+
+			switch(c){
+				case 1:
+					View(); //calls to view data
+					break;
+				case 2:
+					Add(); //calls to add data
+					break;
+				case 3:
+					System.exit(0); //exits the program
+					break;
+					}
+				
+			}
+		
+	}
 
 	public static void main(String[] args) {
-		Pet rufus = new Pet();
+		
+				Pet rufus = new Pet();
 		rufus.age = 3;
 		rufus.name="Rufus";
 		rufus.species="Dog";
@@ -172,50 +219,13 @@ public class JVet {
 		}catch (IOException e) {
 			System.out.println("Error writing to file.");
 		}
-
-
-		//Making the main menu
 		
-		//'here' tracks if the user is in menu and loops.
-
-		boolean here=true;
+		menu();
 		
-		
-		//TODO: add methods to read, view data and exit.
-
-			/*giving the user options 'ops' to choose from.
-			 * Looping through each option in the array with 'i' 
-			 * and printing it to the screen. 
-*/
-			String[] ops = {"Main Menu","[1] View all Pets data","[2] Add Pets data","[3] Exit"};
-			for(int i=0; i < ops.length; i++) {
-
-				System.out.println(ops[i]);
-			}
-		
-			Scanner s = new Scanner(System.in); //scans for user input
-			
-			System.out.println("Your choice: ");
-		while(here) {
-				
-			//user's choice is asked and read
-				
-			int c = s.nextInt();
-
-			//if the user makes a valid choice the loop breaks
-
-			switch(c){
-				case 1:
-					View(); //calls to view data
-					break;
-				case 2:
-					Add(); //calls to add data
-					break;
-				case 3:
-					System.exit(0); //exits the program
-					break;
-					}
-				
-			}
 		}
 	}		
+		/*					
+								-- Note --
+		So far the user adds data by overwriting the previous one.
+		Hopefully in a future update there will be a way to not overwrite.
+		*/
