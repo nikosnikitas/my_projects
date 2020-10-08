@@ -1,0 +1,109 @@
+<!--
+HTML Email Template
+Author: Nikos-Nikitas
+GitHub: nikosnikitas
+
+
+Description {
+
+	"This is an HTML E-Mail Template made Responsive and tries to also be Accessible by everyone."	
+
+}
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" >
+<!-- in case plain html declaration is not supported like older browsers -->
+<!-- xhtml namespace to be used in various specifications according to W3C -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head> 
+		<title> E-mail Template </title>
+		<!-- http-equiv  attribute provides http header for the info/value of the content attribute-->
+		<meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<!-- Responsive Design -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<!-- media query for css for smaller screens -->
+		<style>
+		
+		@media only screen and (min-width:481px) and (max-width:699px){
+			.email_body{
+				background-color:lightgrey;
+				width:100%;
+				width:100vw;
+				}
+		}
+		body {
+			background-color: lightgrey;
+		}
+
+		a	{
+			color:white;
+			text-decoration: none;
+		}
+
+		a:hover{
+			color:lightseagreen;
+		}
+
+		.myLinks{
+			color:lightgreen;
+		}
+		.myLinks:hover{
+			color:lightseagreen;
+		}
+		
+		</style>
+	</head>
+	<body class="email_body" style="margin:0px;padding:0px; background-color: lightgrey;">
+		<table align="center" width="700" border="0" cellspacing="0" cellpadding="0" style="width:700px;font-size:40px;">
+			<tbody style="background-color: white;">
+				<tr>
+					<td style="background-color:white;color:lightgreen;text-align: center;" aria-label="[headline theme]"> 
+						<strong> Your Daily Notification </strong>
+					</td>
+				</tr>
+				<tr>
+					<td style="border-style:solid 2px aliceblue;">
+						<aside aria-label="Logo or image" alt="Company or Organization Logo is displayed here.">
+							<svg>
+								<text x="0" y="30" fill="lightgrey"> LOGO/IMAGE </text>
+							</svg>
+						</aside>
+						<article aria-label="[Descriptive] newsletter text" style="width:fit-content; align-content: center; text-align:center; font-size: large;">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							Maecenas sed dictum massa, id maximus ipsum. Sed quis magna vitae est tincidunt dignissim condimentum a magna. 
+							Mauris porttitor a libero at mollis. Mauris metus elit, rhoncus fringilla placerat sed, auctor sit amet ipsum. 
+							Integer vestibulum sapien sem, at lobortis augue facilisis ac. Suspendisse urna lorem, 
+							feugiat vitae semper a, lobortis eu justo. Nulla ac faucibus neque, facilisis tristique nulla.
+						</article>
+					</td>
+				</tr>
+				<tr>
+					<td style="background-color:lightgreen;color:white;border:solid 2px lightgreen;border-radius:50%; text-align: center;"> 
+						<a href="#" aria-label="Button to visit the [extra description here] link"> Call to Action </a>
+					</td>
+				</tr>
+				<tr>
+					<td style="background-color:white;color:lightgreen;text-align: center;">
+						<strong> Links </strong>
+					</td>
+				</tr>
+				<tr>
+					<footer>
+						<td style="display:flex; justify-content: center;" aria-label="Here are lists of Links">
+							<ul style="list-style-type: none;padding-left: 2px;">
+								<li><a class="myLinks" href="#" aria-label="link to:..."> Link 1 </a></li>
+								<li><a class="myLinks" href="#" aria-label="link to:..."> Link 2 </a></li>
+								<li><a class="myLinks" href="#" aria-label="link to:..."> Link 3 </a></li>
+							</ul>
+							<ul style="list-style-type: none;">
+								<li><a class="myLinks" href="#" aria-label="link to:..."> Link 4 </a></li>
+								<li><a class="myLinks" href="#" aria-label="link to:..."> Link 5 </a></li>
+								<li><a class="myLinks" href="#" aria-label="link to:..."> Link 6 </a></li>
+							</ul>
+						</td>
+					</footer>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
