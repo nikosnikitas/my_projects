@@ -16,3 +16,6 @@ You may use this and other works of mine. Just mention me for my original attemp
 
 Before use delete the "books.db" and make your database
 as you want it with make_db.py
+
+Υπάρχει και ένα Books API στο αρχείο "books-api.py" εάν προτιμάτε να δουλεύετε με αυτό.
+There is also a Books API in the books-api.py file if you prefer interacting with an API.
