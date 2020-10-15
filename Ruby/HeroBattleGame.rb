@@ -58,6 +58,7 @@ end
 #	Let the game begin! Heroes initialize!!
 puts "HERO STATS"
 
+#random number of => 1 out of 100 for Health Points and => 1 out of 10 for attack power.
 h1 = Hero.new("Hero 1", 1+rand(100), 1+rand(10))
 h2 = Hero.new("Hero 2", 1+rand(100), 1+rand(10))
 
