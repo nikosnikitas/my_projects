@@ -1,0 +1,149 @@
+<!--
+    A Survey Form (Responsive, HTML, CSS, Bootstrap 4)
+    Author: Nikos-Nikitas
+    GitHub: nikosnikitas
+-->
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title> My Survey Form </title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap 4 CSS Framework CDN link -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- JQuery JavaScript Library CDN link -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Popper JS needed for Bootstrap 4 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <!-- Latest compiled JavaScript for Bootstrap 4 -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            text-align: center;
+            background-image: url("https://images.pexels.com/photos/3394939/pexels-photo-3394939.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+            font-size: 1rem;
+        }
+
+        #title {
+            color:white;
+        }
+        
+        #description{
+            color:white;
+            font-style: italic;
+            font-size: 1.125rem;
+        }
+
+        .container-fluid{
+            background-color: paleturquoise;
+            width:fit-content;
+            text-align: left;
+            font-size: large;
+            opacity: 90%;
+        }
+
+        #designer{
+            font-size: large;
+            color: darkcyan;
+            text-align: center;
+        }
+
+    </style>
+    </head>
+    <body>
+        <h1 id="title"> SURVEY TITLE </h1>
+        <p id="description">
+            Thank you for your time completing this survey.
+        </p>
+        <br/>
+        <div class="container-fluid">
+            <form id="survey-form">
+                <div class="form-group">
+                    <br/>
+                    <br/>
+                    <label class="form-check-label"> Name </label>
+                    <br/>
+                    <input type="text" id="name" placeholder="Enter your name" required class="form-control"/>
+                    <br/>
+                    <label class="form-check-label"> Email </label>
+                    <br/>
+                    <input type="email" id="email" placeholder="Enter your Email" required class="form-control"/>
+                    <br/>
+                    <label class="form-check-label"> Age (optional) </label>
+                    <br/>
+                    <input type="number" min="18" max="170" id="age" placeholder="Age" class="form-control"/>
+                    <br/>
+                    <label class="form-check-label"> Which option best describes your current role? </label>
+                    <br/>
+                    <select id="dropdown" class="form-control">
+                        <option disabled selected> Select current role </option>
+                        <option> Student </option>
+                        <option> Full Time Job </option>
+                        <option> Full Time Learner </option>
+                        <option> Prefer not to say </option>
+                        <option> Other </option>
+                    </select>
+                    <br/>
+                    <label class="form-check-label"> Would you recommend us to a friend? </label>
+                    <br/>
+                    <input type="radio" name="radioval" checked/>
+                    <label for="Definitely" class="form-check-label"> Definitely </label>
+                    <br/>
+                    <input type="radio" name="radioval"/>
+                    <label for="Maybe" class="form-check-label"> Maybe </label>
+                    <br/>
+                    <input type="radio" name="radioval"/>
+                    <label for="Not sure" class="form-check-label"> Not sure </label>
+                    <br/>
+                    <label class="form-check-label"> What is your favorite feature of our product? </label>
+                    <br/>
+                    <select id="dropdown" class="form-control">
+                        <option disabled selected> Select an option </option>
+                        <option> Projects </option>
+                        <option> IT Support </option>
+                        <option> Web Design </option>
+                        <option> Web Development </option>
+                        <option> Digital Marketing </option>
+                        <option> E-Commerce </option>
+                        <option> Other </option>
+                    </select>
+                    <br/>
+                    <label class="form-check-label"> What would you like us to improve? (Select all that apply) </label>
+                    <br/>
+                    <div class="form-check">
+                        <input type="checkbox" name="web design" class="form-check-input"/>
+                        <label for="web design" class="form-check-label"> Web Design </label>
+                        <br/>
+                        <input name="web development" type="checkbox" class="form-check-input"/>
+                        <label for="web development" class="form-check-label"> Web Development </label>
+                        <br/>
+                        <input type="checkbox" name="i t support" class="form-check-input"/>
+                        <label for="i t support" class="form-check-label"> IT Support </label>
+                        <br/>
+                        <input type="checkbox" name="customer support" class="form-check-input"/>
+                        <label for="customer support" class="form-check-label"> Customer Support </label>
+                        <br/>
+                        <input type="checkbox" name="marketing strategy" class="form-check-input"/>
+                        <label for="marketing strategy" class="form-check-label"> Marketing Strategy </label>
+                        <br/>
+                        <input type="checkbox" name="content" class="form-check-input"/>
+                        <label for="content" class="form-check-label"> Content </label>
+                    </div>
+                    <br/>
+                    <label for="comment-area" class="form-check-label">Any comments or suggestions?</label>
+                    <br/>
+                    <textarea cols="80" rows="10" name="comment-area" placeholder="Enter your comment here..." class="form-control"></textarea>
+                    <br/>
+                    <input type="submit" id="submit" value="Submit" class="btn btn-success btn-block"/>
+                    <br/>
+                    <br/>
+                    <footer id="designer">
+                        Designed by &copy;Nikos-Nikitas
+                        <br/>
+                        GitHub: nikosnikitas
+                    </footer>
+                </div>
+            </form>
+        </div> 
+    </body>
+</html>
