@@ -1,4 +1,4 @@
-#Το _RSI: React-made Social Interface_ είναι μια διαδικτυακή Frontend εφαρμογή κοινωνικής δικτύωσης.
+#Το RSI: React-made Social Interface είναι μια διαδικτυακή Frontend εφαρμογή κοινωνικής δικτύωσης.
 >Σε αυτήν ο χρήστης μπορεί να συνδεθεί με ένα όνομα και να αφήσει δημοσιεύσεις, καθώς και να δει τυχαίες δημοσιεύσεις άλλων.
 Σε δοκιμές χρησιμοποιήθηκε το framework W3.CSS αλλά βόλεψε καλύτερα το απλό CSS με λίγο animation.
 >Η εφαρμογή είναι responsive.
@@ -6,7 +6,7 @@
 
 #### English
 
-#_RSI: React-made Social Interface_
+#RSI: React-made Social Interface
 
 >A Web Application made with ReactJS using class components.
 It represents a social media app where the user can login, view other peoples' posts and make a post.
