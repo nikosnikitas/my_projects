@@ -10,7 +10,7 @@ This is my repository including my projects in web development, software, progra
 If you want to know more about me and computers, below is the link to my blog where I write about computers, the web and cybersecurity. Also, in it, you will find some of my works that aren't included here.
 https://texploringblog.blogspot.com/ 
 
-#                                               Ευχαριστώ για την επίσκεψή σας!
-#                                               Thank you for visiting!
+##                                               Ευχαριστώ για την επίσκεψή σας!
+###                                               Thank you for visiting!
 
-#                                                     Νίκος-Νικήτας
+####                                                     _Νίκος-Νικήτας_
