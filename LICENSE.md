@@ -10,6 +10,6 @@
 You may: 
 1. Use
 2. Fork 
-3. Μake modified copies 
+3. Μake modified copies of
 my works, for every **legal** purpose, **non-commercially**.
 **Just mention me for my original attempt**.
