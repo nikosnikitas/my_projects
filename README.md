@@ -1,11 +1,10 @@
                                       
-#                                              Καλώς ήρθατε!
+#                                               Welcome!
+>This is my repository including my projects in web development, software, programming and scripting projects as a contribution to open source software.
+If you want to know more, visit [my blog](https://texploringblog.blogspot.com/) and [thespotlight](https://thespotlight.gr) where I write about computers, the web and cybersecurity. Also, in my blog, you will find some of my works that aren't included here.
+[Here](https://nikgraphicdesign.tumblr.com/) you will find my works on graphic design and image processing.
 
->Αυτό είναι το αποθετήριό μου με τα έργα μου από ιστοσελίδες, εφαρμογές, προγράμματα και scripts ως εισφορά στον ανοικτό κώδικα. 
-Αν θέλετε να μάθετε περισσότερα επισκεφτείτε [το ιστολόγιό μου](https://texploringblog.blogspot.com/) και το [thespotlight](https://thespotlight.gr) όπου γράφω για την πληροφορική, το διαδίκτυο και την κυβερνοασφάλεια. Επίσης, στο ιστολόγιό μου, θα βρείτε κάποια έργα μου που δεν συμπεριλαμβάνονται εδώ. 
-Έργα μου στην γραφιστική και την επεξεργασία εικόνων θα βρείτε [εδώ](https://nikgraphicdesign.tumblr.com/)
-
-## Περιεχόμενα - My Projects Index
+## My Projects List (Click on a link to go there!)
 **1. Software Development**
   - Python (Console and Graphical apps using Tkinter)
     >Console: [PyRoller: Dice Roller App](https://github.com/nikosnikitas/my_projects/tree/master/PyRoller%20-%20A%20Python%20Dice%20Roller%20-%20%CE%A0%CF%81%CF%8C%CE%B3%CF%81%CE%B1%CE%BC%CE%BC%CE%B1%20%CF%80%CE%BF%CF%85%20%CF%81%CE%AF%CF%87%CE%BD%CE%B5%CE%B9%20%CE%B6%CE%AC%CF%81%CE%B9-%CE%BA%CE%AD%CF%81%CE%BC%CE%B1) | [Exercises for teaching programming](https://github.com/nikosnikitas/my_projects/tree/master/Python%20Exercises)
@@ -39,14 +38,8 @@
     - Django
     >[isit: A web applications that checks if the day is Sunday](https://github.com/nikosnikitas/my_projects/tree/master/Django/isit)
     Server:
-      >I wrote a [custom Web Server in Python](https://github.com/nikosnikitas/my_projects/blob/master/PythonCustomWebServer.py)
+      >I wrote a [custom Web Server in Python](https://github.com/nikosnikitas/my_projects/blob/master/PythonCustomWebServer.py) 
 
-#                                               Welcome!
->This is my repository including my projects in web development, software, programming and scripting projects as a contribution to open source software.
-If you want to know more, visit [my blog](https://texploringblog.blogspot.com/) and [thespotlight](https://thespotlight.gr) where I write about computers, the web and cybersecurity. Also, in my blog, you will find some of my works that aren't included here.
-[Here](https://nikgraphicdesign.tumblr.com/) you will find my works on graphic design and image processing. 
+##                                               Thank you for visiting!
 
-##                                               Ευχαριστώ για την επίσκεψή σας!
-###                                               Thank you for visiting!
-
-####                                                     _Νίκος-Νικήτας_
+####                                                     _Nikos-Nikitas_
