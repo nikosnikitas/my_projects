@@ -27,7 +27,7 @@ If you want to know more, visit [my blog](https://texploringblog.blogspot.com/) 
   - Bootstrap 3/4
   - JQuery, JQuery UI, React JS, VueJS
   >[Responsive Form](https://github.com/nikosnikitas/my_projects/blob/master/ResponsiveSurveyForm.html) | [Email Template](https://github.com/nikosnikitas/my_projects/blob/master/email.html) | [FPA Tax App](https://github.com/nikosnikitas/my_projects/blob/master/Financial%20Apps%20-%20%20%CE%95%CF%86%CE%B1%CF%81%CE%BC%CE%BF%CE%B3%CE%AD%CF%82%20%CF%83%CF%87%CE%B5%CF%84%CE%B9%CE%BA%CE%AD%CF%82%20%CE%BC%CE%B5%20%CF%84%CE%B7%CE%BD%20%CE%9F%CE%B9%CE%BA%CE%BF%CE%BD%CE%BF%CE%BC%CE%AF%CE%B1/FPA-HTML5.html) | [FVM Future Value of Money Calculator](https://github.com/nikosnikitas/my_projects/blob/master/Financial%20Apps%20-%20%20%CE%95%CF%86%CE%B1%CF%81%CE%BC%CE%BF%CE%B3%CE%AD%CF%82%20%CF%83%CF%87%CE%B5%CF%84%CE%B9%CE%BA%CE%AD%CF%82%20%CE%BC%CE%B5%20%CF%84%CE%B7%CE%BD%20%CE%9F%CE%B9%CE%BA%CE%BF%CE%BD%CE%BF%CE%BC%CE%AF%CE%B1/FVM-HTML5.html) | [React Social Interface App](https://github.com/nikosnikitas/my_projects/tree/master/React-made%20Social%20Interface%20Web%20App%20-%20%CE%95%CF%86%CE%B1%CF%81%CE%BC%CE%BF%CE%B3%CE%AE%20%CE%BA%CE%BF%CE%B9%CE%BD%CF%89%CE%BD%CE%B9%CE%BA%CE%AE%CF%82%20%CE%B4%CE%B9%CE%BA%CF%84%CF%8D%CF%89%CF%83%CE%B7%CF%82%20%CE%BC%CE%B5%20ReactJS) 
-  | [Web Office Companion](https://github.com/nikosnikitas/my_projects/tree/master/webOffice%20Companion)
+  | [Web Office Companion](https://github.com/nikosnikitas/my_projects/tree/master/webOffice%20Companion) | [Parrot JQuery Animation](https://github.com/nikosnikitas/my_projects/blob/master/Parrot_JQuery_Animation.html)
   
 **3. Full Stack Web Development**
   - Languages: Python, Front End Technologies
