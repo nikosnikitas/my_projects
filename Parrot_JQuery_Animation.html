@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+ </script>
+   <script> 
+		$(document).ready (function() {
+		
+			$("#b1").click(function() {
+				$("#d1").toggle();
+			});
+			
+			$("#b2").click(function() {
+				$("#d1").fadeOut(1000);
+			});
+			
+			$("#b3").click(function() {
+				$("#d1").slideToggle(1000);
+				
+				});
+			});
+		
+             
+			    
+   </script>
+   </head>
+   <body>
+    <h1> Parrot </h1>
+	<br>
+	<p>
+	<div id="d1">
+	<img src="macaw.png"/>
+	</div>
+	<br>
+   <button id="b1"> Toggle Image </button>
+   <br>
+   <button id="b2"> Fade Image </button>
+   <br>
+   <button id="b3"> Slide Image </button>
+   </p> 
+   </body>    
+   </html>
