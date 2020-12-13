@@ -3,6 +3,7 @@
 >This is my repository including my projects in web development, software, programming and scripting projects as a contribution to open source software.
 If you want to know more, visit [my blog](https://texploringblog.blogspot.com/) and [thespotlight](https://thespotlight.gr) where I write about computers, the web and cybersecurity. Also, in my blog, you will find some of my works that aren't included here.
 [Here](https://nikgraphicdesign.tumblr.com/) you will find my works on graphic design and image processing.
+I've also been Lead Developer, Project Manager and Coordinator for: [tTranslate](https://repl.it/@nikosnikitas/tTranslate#main.py), a team effort developing a translation software in Python.
 
 ## My Projects List (Click on a link to go there!)
 **1. Software Development**
