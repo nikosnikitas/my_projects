@@ -15,4 +15,4 @@
 >There is also a Books API in the books-api.py file if you prefer interacting with an API.
 >Watch the demo and code at repl.it in the link below.
 
-[Δείτε το να δουλεύει εδώ - Demo here]("https://repl.it/@nikosnikitas/eLibrary#main.py")
+[Δείτε το να δουλεύει εδώ - Demo here](https://repl.it/@nikosnikitas/eLibrary#main.py)
