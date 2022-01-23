@@ -65,7 +65,7 @@ public class JVet {
 		//formatting to string
 		
 																
-		try { FileWriter fw = new FileWriter("data.txt"); // true appends to the file instead of overwriting it.
+		try { FileWriter fw = new FileWriter("data.txt",true); // true appends to the file instead of overwriting it.
 	
 				fw.write("User added\n__________\nName: "+ String.format("%s \n",userMade.name));
 				System.lineSeparator();
@@ -86,8 +86,6 @@ public class JVet {
 			System.out.println("Error writing to file.");
 		}
 
-		//Viewing data
-		View();
 		menu(); //returns to main menu
 	}
 	
@@ -180,7 +178,7 @@ public class JVet {
 
 	public static void main(String[] args) {
 		
-				Pet rufus = new Pet();
+		Pet rufus = new Pet();
 		rufus.age = 3;
 		rufus.name="Rufus";
 		rufus.species="Dog";
@@ -203,7 +201,7 @@ public class JVet {
 		
 		makeFile(); //call to create the file
 	
-		try { FileWriter fw = new FileWriter("data.txt");
+		try { FileWriter fw = new FileWriter("data.txt",true);
 		
 			fw.write("Pet names: "+ String.format("%s %s %s \n",rufus.name,katia.name,rico.name));
 			System.lineSeparator(); //adds new line
@@ -223,9 +221,4 @@ public class JVet {
 		menu();
 		
 		}
-	}		
-		/*					
-								-- Note --
-		So far the user adds data by overwriting the previous one.
-		Hopefully in a future update there will be a way to not overwrite.
-		*/
+	}
